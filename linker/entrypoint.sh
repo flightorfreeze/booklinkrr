@@ -5,7 +5,7 @@ SRC_ROOT="${SRC_ROOT:-/source}"
 DST_ROOT="${DST_ROOT:-/target}"
 SCAN_INTERVAL="${SCAN_INTERVAL:-600}"
 
-TYPES=("mangas" "comics" "web-novels" "light-novels")
+TYPES=("mangas" "comics" "web-novels" "light-novels" "webtoons")
 
 echo "📂 Watching directories under: $SRC_ROOT"
 for type in "${TYPES[@]}"; do
