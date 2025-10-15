@@ -1,0 +1,11 @@
+services:
+  booklinker:
+    build: ./linker
+    container_name: booklinker
+    volumes:
+      - /data/book-downloads:/source:ro
+      - /data/media/books:/target:rw
+    environment:
+      - SRC_ROOT=/source
+      - DST_ROOT=/target
+    restart: unless-stopped
