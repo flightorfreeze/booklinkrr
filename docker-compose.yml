@@ -1,6 +1,8 @@
+version: "3.8"
+
 services:
   booklinker:
-    build: ./linker
+    image: yourdockerhubusername/booklinker:latest
     container_name: booklinker
     volumes:
       - /data/book-downloads:/source:ro
@@ -8,4 +10,5 @@ services:
     environment:
       - SRC_ROOT=/source
       - DST_ROOT=/target
+      - SCAN_INTERVAL=600  # 10 minutes (optional)
     restart: unless-stopped
