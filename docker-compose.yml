@@ -6,7 +6,7 @@ services:
     container_name: booklinker
     volumes:
       - /data/book-downloads:/source:ro
-      - /data/media/books:/target:rw
+      - /data/media:/target:rw  # Changed from /data/media/books
     environment:
       - SRC_ROOT=/source
       - DST_ROOT=/target
